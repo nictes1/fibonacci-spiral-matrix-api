@@ -4,6 +4,7 @@ import (
 	routes "fibonacci-spiral-matrix/api/router"
 	"fibonacci-spiral-matrix/utils/web"
 	"log"
+	"os"
 
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
@@ -17,10 +18,10 @@ func init() {
 }
 
 func main() {
-	//port := os.Getenv("API_PORT")
+	port := os.Getenv("API_PORT")
 	engine := gin.Default()
 	engine.Use(web.AddCosHeaders())
 	router := routes.NewRouter(engine)
 	router.MapRoutes()
-	engine.Run("0.0.0.0:8080")
+	engine.Run(":" + port)
 }
