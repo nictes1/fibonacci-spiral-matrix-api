@@ -1,17 +1,45 @@
-# ¿How run the project "fibonacci-spiral-matrix-api"?
+Fibonacci API in Go
+
+This is a simple Go API that generates Fibonacci sequences in a spiral matrix.
+
+Installation
+
+Make sure you have Go installed on your system. Then you can clone this repository and build the application:
+
+bash:
+1- git clone https://github.com/yourusername/fibonacci-spiral-matrix-api.git
+2- cd fibonacci-spiral-matrix-api
+3- go build
+4- ./fibonacci-spiral-matrix-api
+
+The API will be available at http://localhost:8080. You can use tools like curl or an HTTP client to interact with it.
 
 
-* 1 - Clone the repository (http or ssh)
+Endpoints
 
-# $ git clone https://github.com/nictes1/fibonacci-spiral-matrix-api.git 
+Generate a Fibonacci Spiral Matrix
 
-# $ git clone git@github.com:nictes1/fibonacci-spiral-matrix-api.git 
+URL: /spiral
+HTTP Method: POST
+Query Parameters:
+rows: The number of rows in the matrix (integer).
+cols: The number of columns in the matrix (integer).
+Example Request:
+
+curl -X POST "http://localhost:8080/spiral?rows=5&cols=5"
+Example Response:
+
+{
+  "ts": "1623959127000",
+  "rows": [
+    [0, 1, 1, 2, 3],
+    [610, 987, 1597, 2584, 5],
+    [377, 28657, 46368, 4181, 8],
+    [233, 17711, 10946, 6765, 13],
+    [144, 89, 55, 34, 21]
+  ]
+}
 
 
-* 2 - Navigate inside the project --> "fibonacci-spiral-matrix-api" 
 
-# $ cd {yourpath}/fibonacci-spiral-matrix-api
-
-
-* 3 - (Inside project) Run main.go 
-# $ go run main.go 
+© 2023 - nictes1
