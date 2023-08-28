@@ -22,7 +22,7 @@ go build
 The API will be available at http://localhost:8080. You can use tools like curl or an HTTP client to interact with it.
 
 ### Consume API 
-[github.com/nictes1/fibonacci-spiral-frontend] (https://github.com/nictes1/fibonacci-spiral-frontend).
+[fibonacci-spiral-frontend](https://github.com/nictes1/fibonacci-spiral-frontend).
 
 
 
